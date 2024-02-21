@@ -1,5 +1,5 @@
 Plugin ID,CVE,CVSS v2.0 Base Score,Risk,Host,Protocol,Port,Name,Synopsis,Description,Solution,See Also,Plugin Output,STIG Severity,CVSS v3.0 Base Score,CVSS v2.0 Temporal Score,CVSS v3.0 Temporal Score,Risk Factor,BID,XREF,MSKB,Plugin Publication Date,Plugin Modification Date,Metasploit,Core Impact,CANVAS
-10785,,,Critical,192.168.0.124,tcp,445,Microsoft Windows SMB NativeLanManager Remote System Information Disclosure,"It was possible to obtain information about the remote operating
+10785,CVE-Test,,Critical,192.168.0.124,tcp,445,Microsoft Windows SMB NativeLanManager Remote System Information Disclosure,"It was possible to obtain information about the remote operating
 system.","Nessus was able to obtain the remote operating system name and version
 (Windows and/or Samba) by sending an authentication request to port
 139 or 445. Note that this plugin requires SMB to be enabled on the
@@ -7,7 +7,7 @@ host.",n/a,,"The remote Operating System is : Windows 10 Pro 19042
 The remote native LAN manager is : Windows 10 Pro 6.3
 The remote SMB Domain Name is : HPL
 ",,,,,None,,,,17-10-2001,20-09-2021,,,
-10785,,,Critical,192.168.0.125,tcp,445,Microsoft Windows SMB NativeLanManager Remote System Information Disclosure,"It was possible to obtain information about the remote operating
+10785,CSE-8988,,Critical,192.168.0.125,tcp,445,Microsoft Windows SMB NativeLanManager Remote System Information Disclosure,"It was possible to obtain information about the remote operating
 system.","Nessus was able to obtain the remote operating system name and version
 (Windows and/or Samba) by sending an authentication request to port
 139 or 445. Note that this plugin requires SMB to be enabled on the
@@ -80,7 +80,7 @@ supported, or/and
 - Select the 'Allow connections only from computers running Remote 
 Desktop with Network Level Authentication' setting if it is available.","http://www.nessus.org/u?8033da0d
 http://technet.microsoft.com/en-us/library/cc782610.aspx",,,,3.8,,Medium,13818,,,01-06-2005,30-03-2021,,,
-18405,,5.1,Critical,192.168.0.126,tcp,3389,Microsoft Windows Remote Desktop Protocol Server Man-in-the-Middle Weakness,It may be possible to get access to the remote host.,"The remote version of the Remote Desktop Protocol Server (Terminal
+18405,CVE-2005-15556,5.1,Critical,192.168.0.126,tcp,3389,Microsoft Windows Remote Desktop Protocol Server Man-in-the-Middle Weakness,It may be possible to get access to the remote host.,"The remote version of the Remote Desktop Protocol Server (Terminal
 Service) is vulnerable to a man-in-the-middle (MiTM) attack. The RDP 
 client makes no effort to validate the identity of the server when 
 setting up encryption. An attacker with the ability to intercept 
@@ -98,7 +98,7 @@ supported, or/and
 - Select the 'Allow connections only from computers running Remote 
 Desktop with Network Level Authentication' setting if it is available.","http://www.nessus.org/u?8033da0d
 http://technet.microsoft.com/en-us/library/cc782610.aspx",,,,3.8,,Medium,13818,,,01-06-2005,30-03-2021,,,
-18405,,5.1,Critical,192.168.0.127,tcp,3389,Microsoft Windows Remote Desktop Protocol Server Man-in-the-Middle Weakness,It may be possible to get access to the remote host.,"The remote version of the Remote Desktop Protocol Server (Terminal
+18405,CVE-9404,5.1,Critical,192.168.0.127,tcp,3389,Microsoft Windows Remote Desktop Protocol Server Man-in-the-Middle Weakness,It may be possible to get access to the remote host.,"The remote version of the Remote Desktop Protocol Server (Terminal
 Service) is vulnerable to a man-in-the-middle (MiTM) attack. The RDP 
 client makes no effort to validate the identity of the server when 
 setting up encryption. An attacker with the ability to intercept 
