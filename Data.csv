@@ -1,5 +1,21 @@
 Plugin ID,CVE,CVSS v2.0 Base Score,Risk,Host,Protocol,Port,Name,Synopsis,Description,Solution,See Also,Plugin Output,STIG Severity,CVSS v3.0 Base Score,CVSS v2.0 Temporal Score,CVSS v3.0 Temporal Score,Risk Factor,BID,XREF,MSKB,Plugin Publication Date,Plugin Modification Date,Metasploit,Core Impact,CANVAS
-10785,,,None,192.168.0.123,tcp,445,Microsoft Windows SMB NativeLanManager Remote System Information Disclosure,"It was possible to obtain information about the remote operating
+10785,,,Critical,192.168.0.124,tcp,445,Microsoft Windows SMB NativeLanManager Remote System Information Disclosure,"It was possible to obtain information about the remote operating
+system.","Nessus was able to obtain the remote operating system name and version
+(Windows and/or Samba) by sending an authentication request to port
+139 or 445. Note that this plugin requires SMB to be enabled on the
+host.",n/a,,"The remote Operating System is : Windows 10 Pro 19042
+The remote native LAN manager is : Windows 10 Pro 6.3
+The remote SMB Domain Name is : HPL
+",,,,,None,,,,17-10-2001,20-09-2021,,,
+10785,,,Critical,192.168.0.124,tcp,445,Microsoft Windows SMB NativeLanManager Remote System Information Disclosure,"It was possible to obtain information about the remote operating
+system.","Nessus was able to obtain the remote operating system name and version
+(Windows and/or Samba) by sending an authentication request to port
+139 or 445. Note that this plugin requires SMB to be enabled on the
+host.",n/a,,"The remote Operating System is : Windows 10 Pro 19042
+The remote native LAN manager is : Windows 10 Pro 6.3
+The remote SMB Domain Name is : HPL
+",,,,,None,,,,17-10-2001,20-09-2021,,,
+10785,,,Critical,192.168.0.124,tcp,445,Microsoft Windows SMB NativeLanManager Remote System Information Disclosure,"It was possible to obtain information about the remote operating
 system.","Nessus was able to obtain the remote operating system name and version
 (Windows and/or Samba) by sending an authentication request to port
 139 or 445. Note that this plugin requires SMB to be enabled on the
@@ -124,7 +140,43 @@ The remote host is running Microsoft Windows 10 Pro",,,,,None,,,,09-12-2003,27-0
 the remote host.",n/a,,"
 192.168.0.1 resolves as TECAUDDHJCPXJ2.hpl.co.in.
 ",,,,,None,,,,11-02-2004,14-04-2017,,,
-18405,CVE-2005-1794,5.1,Medium,192.168.0.123,tcp,3389,Microsoft Windows Remote Desktop Protocol Server Man-in-the-Middle Weakness,It may be possible to get access to the remote host.,"The remote version of the Remote Desktop Protocol Server (Terminal
+18405,CVE-2005-1794,5.1,Critical,192.168.0.125,tcp,3389,Microsoft Windows Remote Desktop Protocol Server Man-in-the-Middle Weakness,It may be possible to get access to the remote host.,"The remote version of the Remote Desktop Protocol Server (Terminal
+Service) is vulnerable to a man-in-the-middle (MiTM) attack. The RDP 
+client makes no effort to validate the identity of the server when 
+setting up encryption. An attacker with the ability to intercept 
+traffic from the RDP server can establish encryption with the client 
+and server without being detected. A MiTM attack of this nature would 
+allow the attacker to obtain any sensitive information transmitted, 
+including authentication credentials.
+
+This flaw exists because the RDP server stores a hard-coded RSA
+private key in the mstlsapi.dll library. Any local user with
+access to this file (on any Windows system) can retrieve the
+key and use it for this attack.","- Force the use of SSL as a transport layer for this service if
+supported, or/and
+
+- Select the 'Allow connections only from computers running Remote 
+Desktop with Network Level Authentication' setting if it is available.","http://www.nessus.org/u?8033da0d
+http://technet.microsoft.com/en-us/library/cc782610.aspx",,,,3.8,,Medium,13818,,,01-06-2005,30-03-2021,,,
+18405,,5.1,Critical,192.168.0.125,tcp,3389,Microsoft Windows Remote Desktop Protocol Server Man-in-the-Middle Weakness,It may be possible to get access to the remote host.,"The remote version of the Remote Desktop Protocol Server (Terminal
+Service) is vulnerable to a man-in-the-middle (MiTM) attack. The RDP 
+client makes no effort to validate the identity of the server when 
+setting up encryption. An attacker with the ability to intercept 
+traffic from the RDP server can establish encryption with the client 
+and server without being detected. A MiTM attack of this nature would 
+allow the attacker to obtain any sensitive information transmitted, 
+including authentication credentials.
+
+This flaw exists because the RDP server stores a hard-coded RSA
+private key in the mstlsapi.dll library. Any local user with
+access to this file (on any Windows system) can retrieve the
+key and use it for this attack.","- Force the use of SSL as a transport layer for this service if
+supported, or/and
+
+- Select the 'Allow connections only from computers running Remote 
+Desktop with Network Level Authentication' setting if it is available.","http://www.nessus.org/u?8033da0d
+http://technet.microsoft.com/en-us/library/cc782610.aspx",,,,3.8,,Medium,13818,,,01-06-2005,30-03-2021,,,
+18405,,5.1,Critical,192.168.0.125,tcp,3389,Microsoft Windows Remote Desktop Protocol Server Man-in-the-Middle Weakness,It may be possible to get access to the remote host.,"The remote version of the Remote Desktop Protocol Server (Terminal
 Service) is vulnerable to a man-in-the-middle (MiTM) attack. The RDP 
 client makes no effort to validate the identity of the server when 
 setting up encryption. An attacker with the ability to intercept 
@@ -303,6 +355,32 @@ the name of the remote system and the name of its domain.",n/a,,"The following 2
  HPL              = Workgroup / Domain name
 ",,,,,None,,,,06-11-2009,22-11-2019,,,
 42411,CVE-1999-0519,7.5,High,192.168.0.123,tcp,445,Microsoft Windows SMB Shares Unprivileged Access,It is possible to access a network share.,"The remote has one or more Windows shares that can be accessed through
+the network with the given credentials. 
+
+Depending on the share rights, it may allow an attacker to read/write
+confidential data.","To restrict access under Windows, open Explorer, do a right click on
+each share, go to the 'sharing' tab, and click on 'permissions'.",,"
+The following shares can be accessed as tcg.audit :
+
+- AUDIT  - (readable,writable)
+  + Content of this share :
+..
+
+",,,5.5,,High,8026,,,06-11-2009,02-09-2020,,,
+42411,CVE-1999-0519,7.5,High,192.168.0.123,tcp,445,Microsoft Windows SMB Shares Unprivileged Access,It is possible to access a network share.,"The remote has one or more Windows shares that can be accessed through
+the network with the given credentials. 
+
+Depending on the share rights, it may allow an attacker to read/write
+confidential data.","To restrict access under Windows, open Explorer, do a right click on
+each share, go to the 'sharing' tab, and click on 'permissions'.",,"
+The following shares can be accessed as tcg.audit :
+
+- AUDIT  - (readable,writable)
+  + Content of this share :
+..
+
+",,,5.5,,High,8026,,,06-11-2009,02-09-2020,,,
+42411,CVE-1999-0519,7.5,High,192.168.0.124,tcp,445,Microsoft Windows SMB Shares Unprivileged Access,It is possible to access a network share.,"The remote has one or more Windows shares that can be accessed through
 the network with the given credentials. 
 
 Depending on the share rights, it may allow an attacker to read/write
